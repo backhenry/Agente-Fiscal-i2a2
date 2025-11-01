@@ -5,6 +5,16 @@ import os
 import pandas as pd
 import json
 from agente_fiscal_langchain import agent_executor
+from tipi.atualizartipi import baixar_tipi_xlsx, processar_tipi_para_sqlite
+
+# --- ATUALIZAÇÃO AUTOMÁTICA DA TABELA TIPI ---
+print("Verificando e atualizando a tabela TIPI...")
+tentativa_de_download = baixar_tipi_xlsx(output_filename="tipi/tipi_download.xlsx")
+if tentativa_de_download and os.path.exists(tentativa_de_download):
+    processar_tipi_para_sqlite(tentativa_de_download, db_file="tipi/tipi.db")
+    print("Tabela TIPI atualizada com sucesso.")
+else:
+    print("Falha ao baixar a tabela TIPI. Usando a versão local, se existir.")
 
 # --- Funções de Lógica do App ---
 
@@ -108,6 +118,8 @@ with tab_dashboard:
                     linha['item_valor_total'] = item.get('valor_total')
                     dados_planos.append(linha)
             else:
+                # Para documentos sem itens (como NFS-e de OCR), usa o valor total da nota como o valor do item.
+                info_base['item_valor_total'] = info_base.get('valor_total_nota')
                 dados_planos.append(info_base)
 
         df = pd.DataFrame(dados_planos)
@@ -121,6 +133,8 @@ with tab_dashboard:
         colunas_monetarias = ['valor_total_nota', 'item_valor_total']
         for col in colunas_monetarias:
             if col in df.columns:
+                # Limpa e converte o formato de moeda (R$ 1.234,56 -> 1234.56)
+                df[col] = df[col].astype(str).str.replace('.', '', regex=False).str.replace(',', '.', regex=False)
                 df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
 
         st.dataframe(df, use_container_width=True)

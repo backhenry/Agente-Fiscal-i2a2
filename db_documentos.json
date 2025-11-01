@@ -917,5 +917,231 @@
                 }
             }
         ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Conclusão da Auditoria de Documento Fiscal:\n\nA auditoria realizada não identificou erros ou emitiu avisos, indicando que os documentos fiscais foram preenchidos corretamente e estão em conformidade com as normas vigentes.\n\nQuanto às informações de NCM analisadas, foi verificado o seguinte item:\n\n- **NCM 8518.30.00**: \n  - **Descrição**: Fones de ouvido (Auscultadores e auriculares), mesmo combinados com um microfone, e conjuntos ou sortidos constituídos por um microfone e um ou mais alto-falantes.\n  - **Alíquota IPI**: 9.75%\n\nEssa informação está correta e alinhada com a Tabela de Incidência do Imposto sobre Produtos Industrializados (TIPI), garantindo que a tributação aplicada está de acordo com a legislação fiscal brasileira.\n\nRecomenda-se manter a atenção aos detalhes e especificações dos produtos em futuras operações para continuar garantindo a conformidade fiscal.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2.081,27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2.081,27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "CNPJ do emitente '00111222000199' é inválido ou não informado.",
+            "A soma dos itens (14205.00) difere do valor total da nota (14000.00)."
+        ],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Conclusão da Auditoria Fiscal:\n\n1. **Erros Identificados:**\n   - **CNPJ do Emitente Inválido ou Não Informado:** O CNPJ '00111222000199' apresentado na documentação é inválido ou não foi devidamente informado. É essencial corrigir ou fornecer um CNPJ válido para atender às exigências legais e evitar problemas com a fiscalização.\n   - **Divergência nos Valores Totais:** Foi identificado que a soma dos valores dos itens é de R$ 14.205,00, enquanto o valor total da nota está registrado como R$ 14.000,00. Essa inconsistência de R$ 205,00 precisa ser corrigida para evitar problemas de conformidade fiscal.\n\n2. **Avisos Emitidos:**\n   - Não foram emitidos avisos durante a auditoria.\n\n3. **Informações de NCM e Alíquotas de IPI:**\n   - **Item 001 (NCM 8471.30.19):**\n     - **Descrição:** Outras\n     - **Alíquota IPI:** 15%\n   - **Item 002 (NCM 8528.52.00):**\n     - **Descrição:** Capazes de serem conectados diretamente a uma máquina automática para processamento de dados da posição 84.71 e concebidos para serem utilizados com esta máquina\n     - **Alíquota IPI:** 15%\n   - **Item 003 (NCM 8473.30.90):**\n     - **Descrição:** Outros\n     - **Alíquota IPI:** 6.5%\n\n**Recomendações:**\n- **Correção do CNPJ:** É crucial atualizar o CNPJ para um válido e assegurar que esteja corretamente informado na documentação fiscal.\n- **Ajuste nos Valores da Nota Fiscal:** Necessidade de revisão e correção dos valores declarados para eliminar a discrepância entre a soma dos itens e o valor total da nota.\n- **Revisão das Alíquotas de IPI:** Verificar se as alíquotas aplicadas estão de acordo com as operações realizadas e os produtos envolvidos, conforme as descrições e alíquotas de IPI indicadas para cada NCM.\n\nEssas ações são essenciais para garantir a conformidade fiscal e evitar possíveis penalidades ou atrasos em processos de fiscalização futuros.",
+        "tipo_documento": "NFE",
+        "numero": "15048",
+        "data_emissao": "2025-10-28T10:30:00-03:00",
+        "emitente_razao_social": "EMPRESA EMITENTE TESTE LTDA",
+        "emitente_cnpj": "00111222000199",
+        "destinatario_razao_social": "EMPRESA DESTINATARIO TESTE S/A",
+        "destinatario_cnpj_cpf": "99888777000111",
+        "valor_total_nota": "14000.00",
+        "itens": [
+            {
+                "codigo": "001",
+                "descricao": "NOTEBOOK MODELO PRO",
+                "ncm": "84713019",
+                "cfop": "5102",
+                "valor_total": "9000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "9000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "1620.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "002",
+                "descricao": "MONITOR 24 POLEGADAS",
+                "ncm": "85285200",
+                "cfop": "5102",
+                "valor_total": "4000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "4000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "720.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "003",
+                "descricao": "SUPORTE NOTEBOOK",
+                "ncm": "84733090",
+                "cfop": "5102",
+                "valor_total": "1205.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "1205.00",
+                            "pICMS": "18.00",
+                            "vICMS": "216.90"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2.081,27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
     }
 ]

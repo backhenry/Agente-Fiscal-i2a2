@@ -108,6 +108,7 @@ def auditar_e_salvar_dados_fiscais(dados_json: str) -> str:
 
     issues = []
     warnings = []
+    ncm_info = [] # Lista para armazenar informações dos NCMs encontrados
     
     if dados.get('formato') in ['ocr', 'ocr_ia']:
         issues, warnings = _auditar_dados_nfs_ocr(dados)
@@ -130,6 +131,12 @@ def auditar_e_salvar_dados_fiscais(dados_json: str) -> str:
                 if not resultado_ncm:
                     issues.append(f"{item_prefix}NCM '{ncm}' é inválido ou não foi encontrado na Tabela TIPI.")
                 else:
+                    # Adiciona informações do NCM para a conclusão
+                    ncm_info.append(
+                        f"Item {item.get('codigo', 'S/C')} (NCM {resultado_ncm['ncm_encontrado']}): "
+                        f"Descrição: {resultado_ncm['descricao']}, "
+                        f"Alíquota IPI: {resultado_ncm['aliquota']}%"
+                    )
                     try:
                         pIPI_doc_str = item.get('imposto', {}).get('IPI', {}).get('IPITrib', {}).get('pIPI')
                         if pIPI_doc_str is not None:
@@ -155,10 +162,10 @@ def auditar_e_salvar_dados_fiscais(dados_json: str) -> str:
     status = 'error' if issues else ('warning' if warnings else 'success')
     
     # --- GERAÇÃO DA CONCLUSÃO COM IA ---
-    if issues or warnings:
+    if issues or warnings or ncm_info:
         prompt_conclusao = ChatPromptTemplate.from_messages([
-            ("system", "Você é um assistente fiscal especialista. Sua tarefa é gerar uma conclusão clara e útil com base nos resultados de uma auditoria de documento fiscal. Analise a lista de erros e avisos e forneça um resumo em linguagem natural para o usuário, explicando os principais problemas e o que precisa ser verificado. Seja direto e conciso."),
-            ("human", f"Por favor, gere uma conclusão para a seguinte auditoria:\n- Erros Encontrados: {json.dumps(issues)}\n- Avisos Emitidos: {json.dumps(warnings)}")
+            ("system", "Você é um assistente fiscal especialista. Sua tarefa é gerar uma conclusão clara e útil com base nos resultados de uma auditoria de documento fiscal. Analise os erros, avisos e as informações de NCM para gerar a conclusão. Na sua conclusão, além de mencionar os erros e avisos, liste explicitamente a descrição e a alíquota da TIPI para cada NCM encontrado."),
+            ("human", f"Por favor, gere uma conclusão para a seguinte auditoria:\n- Erros Encontrados: {json.dumps(issues)}\n- Avisos Emitidos: {json.dumps(warnings)}\n- Informações de NCM Encontradas: {json.dumps(ncm_info)}")
         ])
         chain_conclusao = prompt_conclusao | llm
         conclusao_analise = chain_conclusao.invoke({}).content
