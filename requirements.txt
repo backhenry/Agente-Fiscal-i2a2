@@ -17,3 +17,5 @@ python-dotenv
 PyMuPDF==1.23.8
 lxml
 pandas
+requests
+beautifulsoup4
