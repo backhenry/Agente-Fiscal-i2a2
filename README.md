@@ -107,3 +107,5 @@ Agente-Fiscal/
     ├─── consultartipi.py       # Script que realiza a consulta no banco de dados
     └─── tipi.db                # Banco de dados SQLite gerado
 ```
+## 7. Licença 📜
+Este projeto é de código aberto (open source) e está licenciado sob a Licença MIT. Sinta-se à vontade para usar, modificar e distribuir o código conforme os termos desta licença.
